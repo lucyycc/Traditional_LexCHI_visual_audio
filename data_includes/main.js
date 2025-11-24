@@ -1,10 +1,10 @@
 //// Script to implement the LexTALE test (Lemhöfer & Broersma, 2012) in Ibex using PennController ////
 /// Author of original text-based English LexTale PCIbex script: Mieke Slim
 /// Author of image-based PCIbex script for Mandarin characters and pseudo-characters: Lisa Levinson
-/// Mandarin materials from:
-/// Chan, I. L., & Chang, C. B. (2018). LEXTALE_CH: A Quick, Character-Based Proficiency Test for Mandarin Chinese. 
-/// Proceedings of the Annual Boston University Conference on Language Development, 42, 114--130. https://doi.org/10.17605/OSF.IO/R3VS9
-/// retrieved from https://osf.io/r3vs9/
+/// Mandarin materials adatped from:
+/// Wen, Y., Qiu, Y., Leong, C.X.R. et al. LexCHI: A quick lexical test for estimating language proficiency in Chinese. 
+/// Behav Res 56, 2333–2352 (2024). https://doi.org/10.3758/s13428-023-02151-z 
+
 
 PennController.ResetPrefix(null);
 //// Use this command before publishing:
@@ -18,7 +18,7 @@ PennController.Sequence("LexTale_instructions", "LexTale_trials", "closing")
    PennController("LexTale_instructions",
     defaultText
     ,
-    newText("LexTale_InstructionText", "您好，这是一个汉字测试。在下一页，您将会看到90个看上去像“汉字”的字，当中只有一些是真正存在的汉字。您需要对每一个字做出判断，如果您认为该字是在中文里存在的（即使您不能够明确地说出该字的意思）或者是您知道该字的话，请点击“是汉字”，如果您认为该字在中文里是不存在的，请点击“不是汉字”。您无需快速回答每一道问题，但请您根据您的第一反应来作答，不用过度的犹豫。请在没有任何外来帮忙的情况下独立完成此测试（不要使用任何汉语词典！）。所有的字皆为简体中文。") 
+ newText("LexTale_InstructionText", "您好：這是一個漢字測驗，這個部分的測驗一共有60题。每一題中，你將會看到並且聽到兩個漢字的組合。在這些組合當中，有一些是中文語詞，例如：＂科學＂。您需要對每一個組合做出判斷，如果你認為該組合在中文裡是存在的（即使您不能明確地說出該語詞的意思）或是您知道該語詞的話，請點擊＂是中文語詞＂，如果您認為該語詞在中文裡是不存在的，請點擊＂不是中文語詞＂。這個測驗並沒有計時，請您根據您的第一反應盡速作答，您不用過度的猶豫，並且請您在沒有使用任何中文辭典或是字典的幫忙下獨力完成此刻驗。所有的詞語皆為繁體中文，發音為台灣華語。") 
     ,
     newCanvas("myCanvas", 600, 600)
             .settings.add(0,0, getText("LexTale_InstructionText"))
