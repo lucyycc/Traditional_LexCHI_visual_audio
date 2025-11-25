@@ -93,9 +93,7 @@ Template("stimuli.csv", row =>
         newVar("playRequestTime").global().set(0),
         newVar("RT_yes").global().set("NA"),
         newVar("RT_no").global().set("NA"),
-        newVar("AudioLatency").global().set("NA"),  // Initialize for logging
-        newVar("Subject").global().set("NA"),       // Set this somewhere earlier
-
+       
         
         // Show stimulus (could move before audio if you want)
         newText("stimulus", row.Stimulus)
